@@ -1,0 +1,20 @@
+.perfect-spinner {
+  width: 35px;
+  height: 35px;
+  border: 3px solid rgba(0, 86, 179, 0.1); /* Faint background track */
+  border-top: 3px solid #0056b3;           /* Your primary blue color */
+  border-radius: 50%;                      /* Makes it a perfect circle */
+  box-sizing: border-box;
+  
+  /* Smooth, continuous rotation */
+  animation: spinPerfect 0.7s linear infinite;
+}
+
+@keyframes spinPerfect {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

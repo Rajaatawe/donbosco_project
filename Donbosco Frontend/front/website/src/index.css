@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+body {
+  font-family: sans-serif;
+  background: white;
+  color: #111;
+}
+.linkClass {
+  background: #1b2d5a;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px; /* لإبعاد العناصر عن الحواف */
+}
+
+ul {
+  display: flex;
+  gap: 20px; /* لعمل مسافات بين الروابط */
+  list-style: none;
+}

@@ -1,0 +1,86 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--glass-bg, rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border, rgba(0, 0, 0, 0.05));
+  padding-block: 1rem;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--c-navy, #0f172a);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Base Link Architecture */
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-main, #334155);
+  font-weight: 600;
+  padding-block: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+/* Premium Animated Underline Effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--c-red, #2563eb); /* Substituted custom orange/red identity tone */
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Link Hover State Transitions */
+.nav-links a:hover {
+  color: var(--c-red, #2563eb);
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Language Switch Action button styling */
+.lang-toggle {
+  margin-left: 1.5rem;
+  background: var(--c-blue, #2563eb);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-md, 8px);
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.lang-toggle:hover {
+  background: var(--c-navy, #0f172a);
+  transform: translateY(-1px);
+}
+
+.lang-toggle:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,17 @@
+/* Base style for all animated skeleton shapes */
+.skeleton-about {
+  width: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #fafdff 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmerEffect 1.5s infinite linear;
+}
+
+/* Fluid hardware-accelerated shimmer animation */
+@keyframes shimmerEffect {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
